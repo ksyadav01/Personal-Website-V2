@@ -17,7 +17,6 @@ module.exports = {
       options: {
         fonts: [
           `Megrim`,
-          `Space Mono`,
           //`source sans pro\:300,400,400i,700` // you can also specify font weights and styles
         ],
         display: 'swap'
