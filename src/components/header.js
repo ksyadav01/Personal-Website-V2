@@ -44,7 +44,7 @@ const headerContainer = {
 const logoContainer = {
     display: "flex",
     alignItems: "flex-end",
-    flex: 2,
+    flex: 1,
     padding: "1rem 3rem"
 }
 const navContainer = {

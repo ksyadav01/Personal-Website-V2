@@ -1,5 +1,6 @@
 import * as React from "react"
 import Header from "../components/header"
+import Home from "../components/home"
 // styles
 const pageStyles = {
   color: "#232129",
@@ -130,6 +131,7 @@ const IndexPage = () => {
   return (
     <div>
     <Header></Header>
+    <Home></Home>
     <main style={pageStyles}>
       <title>Home Page</title>
       <h1 style={headingStyles}>
