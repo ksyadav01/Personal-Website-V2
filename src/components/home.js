@@ -43,6 +43,12 @@ const HomeContainer = styled.div`
     justify-content: space-around;
     padding-top: 10rem;
 `
+const LeftOuterContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+`
 const LeftContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -56,9 +62,7 @@ const RightContainer = styled.div`
     width: 30rem;
     `
 const NameContainer = styled.div`
-width: 100%;
-    
-    
+    width: 100%;
     border: 1px solid blue;
     `
 const DescriptionContainer = styled.div`
@@ -124,31 +128,33 @@ const navContainer = {
 const home = () =>{
     return(
         <HomeContainer>
-            <LeftContainer>
-                <NameContainer>
-                    <Name>
-                        Hello, I'm {"\n"} Karan Yadav
-                    </Name>
-                </NameContainer>
-                <DescriptionContainer>
-                    <Description>
-                        I'm a Software Engineer based out of upstate New York and fill
-                        this out later ahhhhhh hhhhhh hsdjaj bsjdbjs kjh djkhsbj  shjk akj
-                        hs adkjhasd kjh
-                    </Description>
-                </DescriptionContainer>
-                <StatusContainer>
-                    <StatusLeftCarrot>
-                        <img alt="Left Carrot" src={LeftCarrotImage} />
-                    </StatusLeftCarrot>
-                    <Status>
-                        future problem
-                    </Status>
-                    <StatusRightCarrot>
-                        <img alt="Right Carrot" src={RightCarrotImage} />
-                    </StatusRightCarrot>
-                </StatusContainer>
-            </LeftContainer>
+            <LeftOuterContainer>
+                <LeftContainer>
+                    <NameContainer>
+                        <Name>
+                            Hello, I'm {"\n"} Karan Yadav
+                        </Name>
+                    </NameContainer>
+                    <DescriptionContainer>
+                        <Description>
+                            I'm a Software Engineer based out of upstate New York and fill
+                            this out later ahhhhhh hhhhhh hsdjaj bsjdbjs kjh djkhsbj  shjk akj
+                            hs adkjhasd kjh
+                        </Description>
+                    </DescriptionContainer>
+                    <StatusContainer>
+                        <StatusLeftCarrot>
+                            <img alt="Left Carrot" src={LeftCarrotImage} />
+                        </StatusLeftCarrot>
+                        <Status>
+                            future problem
+                        </Status>
+                        <StatusRightCarrot>
+                            <img alt="Right Carrot" src={RightCarrotImage} />
+                        </StatusRightCarrot>
+                    </StatusContainer>
+                </LeftContainer>
+            </LeftOuterContainer>
             <RightContainer>
                 <ImageContainer>
                     <img style={{width: "30rem"}} alt="Profile Picture" src={ProfilePicture}></img>
