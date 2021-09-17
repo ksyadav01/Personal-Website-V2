@@ -39,7 +39,8 @@ const headerContainer = {
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
-    padding: "1rem 3rem"
+    padding: "1rem 3rem",
+    boxSizing: "border-box"
 }
 const logoContainer = {
     display: "flex",

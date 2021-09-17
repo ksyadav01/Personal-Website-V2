@@ -43,6 +43,7 @@ const HomeContainer = styled.div`
     padding: "1rem 3rem";
     justify-content: space-around;
     padding-top: 10rem;
+    box-sizing: border-box;
 `
 const LeftOuterContainer = styled.div`
     display: flex;
