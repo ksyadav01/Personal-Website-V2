@@ -150,8 +150,6 @@ const Image = styled.div`
 const Home = () =>{
     
     const [CurrentSong, setCurrentSong] = useState();
-    let userName= "kingeinhorn";
-    let apiKey = "ae3471fe6f952ffb40c99ad83bba5596"
     useEffect(()=>{
         async function SongFetch(){
             let response = await fetch(process.env.LASTFM_KEY)
@@ -159,7 +157,7 @@ const Home = () =>{
             setCurrentSong(response.recenttracks.track[0].name + " by " +response.recenttracks.track[0].artist["#text"]);
             
         }
-        SongFetch()
+        SongFetch() 
     },[]);
     return(
         <HomeContainer>
