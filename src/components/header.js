@@ -33,14 +33,19 @@ const TextHolder = styled.div`
     `
 
 const headerContainer = {
-    width: "100%",
+    minWidth: "100%",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    whiteSpace: "nowrap",
     height: "3rem",
     backgroundColor: "#151515",
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
     padding: "1rem 3rem",
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    border: "1px solid red"
 }
 const logoContainer = {
     display: "flex",
