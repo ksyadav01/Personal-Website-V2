@@ -1,8 +1,9 @@
 'use strict';
 import React, { useState, useEffect } from 'react';
 import { render } from 'react-dom';
-import LogoFont from "./fonts/LogoFont"
-import CodeFont from "./fonts/CodeFont"
+import LogoFont from "./fonts/LogoFont";
+import CodeFont from "./fonts/CodeFont";
+import Experiences from "./experiences.js";
 import styled from 'styled-components';
 import LeftCarrotImage from "../images/LeftCarrot.png";
 import RightCarrotImage from "../images/RightCarrot.png";
@@ -11,7 +12,7 @@ import ProfilePicture from "../images/ProfilePicture.jpg";
 
 const ExperienceContainer = styled.div`
     width: 100%;
-    background-color: #151515;
+    background-color: #082032;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,9 +28,27 @@ const ExperienceTitle = styled.div`
     font-size: 3rem;
 `
 const ExperienceDescription = styled.div`
-    color: white;
+    color: #FF4C29;
     font-family: Space Mono;
-    font-size: 1rem;
+    font-size: 1.5rem;
+`
+const ExperienceGrid = styled.div`
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    height: 1000px;
+`
+const ExperienceLine = styled.div`
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        left:30%;
+        border-left: 3px solid #FF4C29;
 `
 const Experience = () =>{
     
@@ -51,6 +70,10 @@ const Experience = () =>{
             <ExperienceDescription>
                 Where I've Worked At
             </ExperienceDescription>
+            <ExperienceGrid>
+                <ExperienceLine></ExperienceLine>
+                <Experiences></Experiences>
+            </ExperienceGrid>
         </ExperienceContainer>
     )
 }

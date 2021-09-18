@@ -36,7 +36,7 @@ const TextHolder = styled.div`
     `
 const HomeContainer = styled.div`
     width: 100%;
-    background-color: #151515;
+    background-color: #082032;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -74,7 +74,7 @@ const RightContainer = styled.div`
     `
 const NameContainer = styled.div`
     width: 75%;
-    border-bottom: 1px solid white;
+    border-bottom: 3px solid #FF4C29;
     `
 const DescriptionContainer = styled.div`
     margin-top: 1rem;
@@ -87,6 +87,9 @@ const StatusContainer = styled.div`
     justify-content: space-around;
     align-items: center;
     margin-top: 5rem;
+    padding: 10px;
+    border: 3px solid #334756;
+    border-radius: 20px;    
     `
 const ImageContainer = styled.div`
     
@@ -112,19 +115,19 @@ const StatusLeftCarrot = styled.div`
     font-size: 10rem;
     
     font-weight: 400;
-    color: white;
+    color: #FF4C29;
     transform:scale(1,2); 
     margin-right: 2%;
     `   
 const StatusRightSlash = styled.div`
     font-size: 10rem;
     font-family: Space Mono;
-    color: white;
+    color: #FF4C29;
     margin-right: -2%;
     `  
 const StatusRightCarrot = styled.div`
     font-size: 10rem;
-    color: white;
+    color: #FF4C29;
     transform:scale(1,2);
     `
 const StatusHolder = styled.div`

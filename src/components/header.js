@@ -25,7 +25,8 @@ const TextHolder = styled.div`
     transition: 0.25s ease;
     &:hover {
         transition-duration: .2s;
-        transform: translateY(-5px)
+        transform: translateY(-5px);
+        color: #FF4C29;
     }
     &:after {
         transition: 0.25s ease;
@@ -35,7 +36,7 @@ const TextHolder = styled.div`
 const headerContainer = {
     minWidth: "100%",
     height: "3%",
-    backgroundColor: "#151515",
+    backgroundColor: "#071c2b",
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
