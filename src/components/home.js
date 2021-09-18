@@ -39,40 +39,52 @@ const HomeContainer = styled.div`
     background-color: #151515;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    padding: "1rem 3rem";
+    align-items: flex-end;
     justify-content: space-around;
-    padding-top: 10rem;
+    padding-top: 3%;
     box-sizing: border-box;
+    border: 5px solid blue;
+    z-index: 5;
 `
 const LeftOuterContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border: 1px solid red;
+    width: 60%;
+    height: 100%;
 `
 const LeftContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60rem;
+    width: 100%;
+    border: 1px solid red;
     `
 const RightContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40rem;
+    width: 30%;
+    
+    align-items: center;
+    
+    border: 1px solid red;
+    height: 100%;
     `
 const NameContainer = styled.div`
-    width: 35rem;
+    width: 75%;
     border-bottom: 1px solid white;
     `
 const DescriptionContainer = styled.div`
     margin-top: 1rem;
-    width: 35rem;
+    width: 75%;
+    
+    border: 1px solid white;
     `
 const StatusContainer = styled.div`
-    width: 60rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -110,18 +122,17 @@ const StatusRightSlash = styled.div`
     font-size: 10rem;
     font-family: Space Mono;
     color: white;
-    margin-right: -2rem;
+    margin-right: -2%;
     `  
 const StatusRightCarrot = styled.div`
     font-size: 10rem;
     color: white;
-    transform:scale(1,2); 
-    mergin-left: -50%;
+    transform:scale(1,2);
     `
 const StatusHolder = styled.div`
     display: flex;
     flex-direction: column;
-    width: 40rem;
+    width: 80%;
 
 `
 const StatusLeftRightHolder = styled.div`
@@ -242,9 +253,8 @@ const Home = () =>{
                 </LeftContainer>
             </LeftOuterContainer>
             <RightContainer>
-                <ImageContainer>
-                    <img style={{width: "25rem", border: "1px solid black", borderRadius: "20px"}} alt="Profile Picture" src={ProfilePicture}></img>
-                </ImageContainer>
+                    <img style={{width: "80%", marginBottom: "20%", border: "1px solid black", borderRadius: "20px"}} alt="Profile Picture" src={ProfilePicture}></img>
+               
             </RightContainer>
         </HomeContainer>
     )

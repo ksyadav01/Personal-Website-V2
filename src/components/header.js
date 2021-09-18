@@ -34,11 +34,7 @@ const TextHolder = styled.div`
 
 const headerContainer = {
     minWidth: "100%",
-    position: "absolute",
-    top: 0,
-    left: 0,
-    whiteSpace: "nowrap",
-    height: "3rem",
+    height: "3%",
     backgroundColor: "#151515",
     display: "flex",
     flexDirection: "row",
