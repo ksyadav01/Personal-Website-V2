@@ -43,7 +43,6 @@ const HomeContainer = styled.div`
     justify-content: space-around;
     padding-top: 3%;
     box-sizing: border-box;
-    border: 5px solid blue;
     z-index: 5;
     height: 100%
 `
@@ -52,7 +51,6 @@ const LeftOuterContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
     width: 60%;
     top: 0;
     bottom: 0;
@@ -73,7 +71,6 @@ const RightContainer = styled.div`
     justify-content: center;
     width: 30%;
     align-items: center;
-    border: 1px solid red;
     `
 const NameContainer = styled.div`
     width: 75%;
@@ -98,6 +95,7 @@ const NameIntro = styled.div`
     font-size: 3.5rem;
     font-family: Space Mono;
     color: white;
+    margin-bottom: -3%;
     `
 const Name = styled.div`
     font-size: 5rem;
@@ -197,7 +195,6 @@ const Home = () =>{
                     </DescriptionContainer>
                     <StatusContainer>
                         <StatusLeftCarrot>
-                            {/* <img alt="Left Carrot" style={{height: "10rem"}} src={LeftCarrotImage} /> */}
                             {"<"}
                         </StatusLeftCarrot>
                         <StatusHolder>
@@ -248,7 +245,6 @@ const Home = () =>{
                             </StatusLeftRightHolder>
                         </StatusHolder>
                         <StatusRightSlash>
-                            {/* <img alt="Right Carrot" src={RightCarrotImage} /> */}
                             /
                         </StatusRightSlash>
                         <StatusRightCarrot>

@@ -41,7 +41,6 @@ const headerContainer = {
     alignItems: "flex-start",
     padding: "1rem 3rem",
     boxSizing: "border-box",
-    border: "1px solid red"
 }
 const logoContainer = {
     display: "flex",
