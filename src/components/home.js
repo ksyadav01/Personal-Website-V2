@@ -258,7 +258,7 @@ const Home = () =>{
                 </LeftContainer>
             </LeftOuterContainer>
             <RightContainer>
-                    <img style={{width: "80%", marginTop: "10%", border: "1px solid black", borderRadius: "20px"}} alt="Profile Picture" src={ProfilePicture}></img>
+                    <img style={{width: "80%", marginTop: "10vh", border: "1px solid black", borderRadius: "20px"}} alt="Profile Picture" src={ProfilePicture}></img>
                
             </RightContainer>
         </HomeContainer>

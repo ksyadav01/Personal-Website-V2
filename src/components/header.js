@@ -63,7 +63,7 @@ const header = () =>{
                 <LogoFont text="KYADAV" style={logo}/>
             </div>
             <div style={navContainer}>
-                <TextHolder>About Me</TextHolder>
+                <TextHolder style={{ whiteSpace: "nowrap"}}>About Me</TextHolder>
                 <CodeFont text="&nbsp;|&nbsp;" style={text}/>
                 <TextHolder>Experience</TextHolder>
                 <CodeFont text="&nbsp;|&nbsp;" style={text}/>
