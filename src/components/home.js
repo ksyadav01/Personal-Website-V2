@@ -116,7 +116,7 @@ const StatusLeftCarrot = styled.div`
     font-weight: 400;
     color: white;
     transform:scale(1,2); 
-    mergin-right: -50%;
+    margin-right: 2%;
     `   
 const StatusRightSlash = styled.div`
     font-size: 10rem;
@@ -143,13 +143,18 @@ const StatusLeftRightHolder = styled.div`
 
 `
 const StatusLeft = styled.div`
-    flex: 1;
+    flex: 5;
     font-size: 1rem;
     font-family: Space Mono;
     color: white;
+    justify-content: center;
+    
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 2%;   
     `
 const StatusRight = styled.div`
-    flex: 1;
+    flex: 4;
     font-size: 1rem;
     font-family: Space Mono;
     color: white;
