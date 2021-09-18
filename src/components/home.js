@@ -39,12 +39,13 @@ const HomeContainer = styled.div`
     background-color: #151515;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-around;
     padding-top: 3%;
     box-sizing: border-box;
     border: 5px solid blue;
     z-index: 5;
+    height: 100%
 `
 const LeftOuterContainer = styled.div`
     display: flex;
@@ -53,25 +54,26 @@ const LeftOuterContainer = styled.div`
     justify-content: space-between;
     border: 1px solid red;
     width: 60%;
-    height: 100%;
+    top: 0;
+    bottom: 0;
+    position: relative;
 `
 const LeftContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border: 1px solid red;
     `
 const RightContainer = styled.div`
     display: flex;
+    top: 0;
+    bottom: 0;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     width: 30%;
-    
     align-items: center;
-    
     border: 1px solid red;
-    height: 100%;
     `
 const NameContainer = styled.div`
     width: 75%;
@@ -80,8 +82,6 @@ const NameContainer = styled.div`
 const DescriptionContainer = styled.div`
     margin-top: 1rem;
     width: 75%;
-    
-    border: 1px solid white;
     `
 const StatusContainer = styled.div`
     width: 100%;
@@ -258,7 +258,7 @@ const Home = () =>{
                 </LeftContainer>
             </LeftOuterContainer>
             <RightContainer>
-                    <img style={{width: "80%", marginBottom: "20%", border: "1px solid black", borderRadius: "20px"}} alt="Profile Picture" src={ProfilePicture}></img>
+                    <img style={{width: "80%", marginTop: "10%", border: "1px solid black", borderRadius: "20px"}} alt="Profile Picture" src={ProfilePicture}></img>
                
             </RightContainer>
         </HomeContainer>
