@@ -71,7 +71,6 @@ const Experience = () =>{
                 Where I've Worked At
             </ExperienceDescription>
             <ExperienceGrid>
-                <ExperienceLine></ExperienceLine>
                 <Experiences></Experiences>
             </ExperienceGrid>
         </ExperienceContainer>
