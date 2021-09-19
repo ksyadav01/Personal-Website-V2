@@ -43,6 +43,7 @@ const YearsWorked = styled.div`
     color: #FF4C29;
     font-family: Space Mono;
     font-size: 1rem;
+    text: nowrap;
 `
 const DashLeftLine = styled.div`
     grid-area: secondGap;
