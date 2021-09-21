@@ -18,8 +18,7 @@ const ExperienceHolder = styled.div`
     grid-template-rows: 100%;
     grid-template-areas:
         "title title secondGap LogoLine thirdGap info info info info .";
-
-    padding-top: 8%;
+    padding-top: 5%;
 `
 const TitleArea = styled.div`
     grid-area: title;
@@ -38,12 +37,13 @@ const Company = styled.div`
     color: white;
     font-family: Space Mono;
     font-size: 1.75rem;
+    text-align: center;
 `
 const YearsWorked = styled.div`
     color: #FF4C29;
     font-family: Space Mono;
     font-size: 1rem;
-    text: nowrap;
+    white-space: nowrap;
 `
 const DashLeftLine = styled.div`
     grid-area: secondGap;
@@ -53,24 +53,42 @@ const DashLeftLine = styled.div`
     border-bottom: 3px solid #334756;
 `
 const ImageBackground = styled.div`
-    height: 80px;
-    width: 80px;
+    width: 100%;   
     display: flex;
+
     justify-content: center;
     align-items: center;
-    background-color: white;
-    border-width: 1px;
-    border-radius: 40px;
-    margin-top: 100%; //Padding in job description caused it
-    // z-index: 3;
+    z-index: 3;
     grid-area: LogoLine;
+    position: relative;
     
 
 `
-const ImageHolder = styled.img`
-    height: 80%;
-    z-index: 6;
+const ImageHolderHolder = styled.div`
+    height: 80px;
+    width: 100%;
+    background-color: white;   
+    display: flex;
 
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-radius: 40px;
+`
+const ImageHolder = styled.img`
+    grid-column: 1/ span 1;
+    z-index: 6; 
+
+    justify-content: center;
+    align-items: center;
+`
+const MiddleLine= styled.div`
+    border-right: 1px solid #FF4C29;
+    height: 400%;
+    width: 100%;
+    position: absolute;
+    right: 40px;
+    z-index: -1;
 `
 const Line = styled.div`
     //position: absolute;
@@ -101,51 +119,58 @@ const InfoHolder = styled.div`
 const InfoHeader = styled.div`
     color: white;
     font-family: Space Mono;
-    font-size: 1rem;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #FF4C29;
+    border-radius: 5px;
+    
+    text-align: center;
 `
 const InfoSubHeader = styled.div`
-    color: white;
+    color: #FF4C29;
     font-family: Space Mono;
     font-size: 0.75rem;
+    padding-bottom: 5%;
 `
 const InfoText = styled.div`
     color: white;
     font-family: Space Mono;
     font-size: 1rem;
+    padding-left: 5%;
+    padding-right: 5%;
 `
-const WorkExperience = () =>{
+const WorkExperience = (props) =>{
     
     
     return(
         <ExperienceHolder>
             <TitleArea>
                 <Company>
-                    IvyScope
+                    {props.Company}
                 </Company>
                 <YearsWorked>
-                    July 2021 - Present
+                    {props.Time}
                 </YearsWorked>
             </TitleArea>
             <DashLeftLine />
 
             <ImageBackground>
-                <ImageHolder src={IvyScope}></ImageHolder>
-                
+                <ImageHolderHolder>
+                    <ImageHolder src={props.ImgSRC}></ImageHolder>
+                </ImageHolderHolder>
+                {/* <MiddleLine /> */}
             </ImageBackground>
 
             <DashRightLine />
             
             <InfoHolder>
                 <InfoHeader>
-                    Lead Full Stack Developer
+                    {props.JobTitle}
                 </InfoHeader>
                 <InfoSubHeader>
-                    Formerly Full Stack Intern
+                    {props.FormerPosition}
                 </InfoSubHeader>
                 <InfoText>
-                    Primarily working with other developers to revamp frontend webpages, along with cleaning up and 
-                    refactoring the backend database modal. This is done using the Materials UI Framework for increasing 
-                    frontend functionality and MongoDB Compass for managing the backend database.
+                    {props.JobDesc}
                 </InfoText>
 
             </InfoHolder>
