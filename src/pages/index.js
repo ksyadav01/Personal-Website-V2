@@ -2,6 +2,7 @@ import * as React from "react"
 import Header from "../components/header"
 import Home from "../components/home"
 import Experience from "../components/experience"
+import Projects from "../components/projects"
 // styles
 const pageStyles = {
   color: "#232129",
@@ -134,6 +135,7 @@ const IndexPage = () => {
     <Header />
     <Home />
     <Experience />
+    <Projects />
     <main style={pageStyles}>
       <title>Home Page</title>
       <h1 style={headingStyles}>

@@ -1,13 +1,6 @@
 'use strict';
 import React, { useState, useEffect } from 'react';
-import { render } from 'react-dom';
-import LogoFont from "./fonts/LogoFont";
-import CodeFont from "./fonts/CodeFont";
-import Experiences from "./experiences.js";
 import styled from 'styled-components';
-import LeftCarrotImage from "../images/LeftCarrot.png";
-import RightCarrotImage from "../images/RightCarrot.png";
-import IvyScope from "../images/IvyScope.png";
 
 
 const ExperienceHolder = styled.div`
