@@ -110,7 +110,9 @@ const ProjectInfoBox = styled.div`
     grid-column-end: d;
     grid-row-start: a5;
     grid-row-end: a7;
-    background-color: #FF4C29;
+    background-color: #bc2302;
+    
+    //filter: grayscale(40%);
     border: 1px;
     border-radius: 10px;
     width: 100%;
@@ -119,11 +121,14 @@ const ProjectInfoBox = styled.div`
     align-items: flex-end;
     justify-content: flex-start;
     transition: box-shadow .3s;
+    transition: filter 0.3s ease-in-out;
     flex-direction: column;
     display: flex;
     &:hover{
         box-shadow: 1px 3px 5px 2px #2C394B;
         
+
+        filter: saturate(60%);
     }
     &:hover ${ProjectInfoText}{
         
@@ -158,10 +163,19 @@ const GithubLinkHolder = styled.div`
     justify-content: center;
     align-items: flex-end;
 `
-const GithubLink = styled.div`
+const GithubLink = styled.a`
     color: white;
     font-family: Space Mono;
     font-size: 0.8rem;
+    transition: 0.25s ease;
+    &:hover {
+        transition-duration: .2s;
+        transform: translateX(5px);
+        color: #FF4C29;
+    }
+    &:after {
+        transition: 0.25s ease;
+    }
 
 `
 const ProjectTechnologyBox = styled.div`
@@ -181,7 +195,7 @@ const ProjectTechnologyBox = styled.div`
 const ProjectTechnologyHolder = styled.div`
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
     flex:1;
     width: 100%;
@@ -190,7 +204,7 @@ const ProjectTechnologyHolder = styled.div`
 const ProjectLanguageHolder = styled.div`
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: flex-end;
     flex: 1;
     width: 100%;
@@ -226,9 +240,7 @@ const WorkExperience = (props) =>{
                 </ProjectInfoBody>
             </ProjectInfoBox>
             <GithubLinkHolder>
-                <GithubLink>
-                    penis
-                </GithubLink>
+                <GithubLink href="https://github.com/ksyadav01/Ping">G I T H U B</GithubLink>
             </GithubLinkHolder>
 
             <ProjectTechnologyBox>
