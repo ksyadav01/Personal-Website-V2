@@ -8,7 +8,8 @@ import styled from 'styled-components';
 import LeftCarrotImage from "../images/LeftCarrot.png";
 import RightCarrotImage from "../images/RightCarrot.png";
 import IvyScope from "../images/IvyScope.png";
-import Projects from "./projects.js"
+import IndividualProjects from "./projects.js"
+import PingProject from '../images/PingProject.png';
 
 const ProjectsContainer  = styled.div`
     width: 100%;
@@ -33,9 +34,17 @@ const ProjectsDescription = styled.div`
     font-family: Space Mono;
     font-size: 1.5rem;
 `
+const IndividualProjectsHolder = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+`
 
 const Projects = (props) =>{
-    
+    const PingTechnologies = ['react-native','|','firebase','|','expo','|','github']
+    const PingLanguages = ['javascript','|','html','|','css']
     
     return(
         <ProjectsContainer>
@@ -45,9 +54,13 @@ const Projects = (props) =>{
             <ProjectsDescription>
                 Some Of My Creations
             </ProjectsDescription>
-            <Projects>
+            <IndividualProjectsHolder>
+                <IndividualProjects PingProject={PingProject} temp={'asdads'} Technologies={PingTechnologies}
+                    Languages={PingLanguages} GitHub={"https://github.com/ksyadav01/Ping"}>
 
-            </Projects>
+                </IndividualProjects>
+                
+            </IndividualProjectsHolder>
         </ProjectsContainer>
     )
 }

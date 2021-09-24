@@ -2,7 +2,7 @@ import * as React from "react"
 import Header from "../components/header"
 import Home from "../components/home"
 import Experience from "../components/experience"
-import Projects from "../components/projects"
+import Projects from "../components/project"
 // styles
 const pageStyles = {
   color: "#232129",
