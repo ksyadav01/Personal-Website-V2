@@ -20,7 +20,8 @@ const ProjectHolder = styled.div`
         "a8 b8 c8 d8 e8"
         "a9 b9 c9 d9 e9";
         //"a10 b10 c10 d10 e10";
-    padding-top: 5%;
+    padding-top: 6%;
+    padding-bottom: 6%;
 `
 const ProjectImageHolder = styled.div`
     grid-column-start: a;
@@ -33,11 +34,23 @@ const ProjectImage = styled.img`
     border: 1px;
     border-radius: 5px;
 `
-const ProjectInfoHolder = styled.div`
-`
-const ProjectTitleBox = styled.div`
+const ProjectFeatured = styled.div`
+    grid-column-start: c;
+    grid-column-end: d;
+    grid-row-start: a;
+    grid-row-end: a1;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 
+    color: #FF4C29;
+    font-family: Space Mono;
+    font-size: 1rem;
+    text-align: right;
 `
 const ProjectTitle = styled.div`
     grid-column-start: c;
@@ -217,7 +230,7 @@ const ProjectTechnology = styled.div`
     text-align: right;
 `
 
-const WorkExperience = (props) =>{
+const ProjectRight = (props) =>{
     
     return(
         <ProjectHolder>
@@ -226,21 +239,26 @@ const WorkExperience = (props) =>{
                 
                 </ProjectImage>
             </ProjectImageHolder>
+                {props.Featured 
+                    ? 
+                        <ProjectFeatured>
+                            FEATURED PROJECT
+                        </ProjectFeatured>
+                    : 
+                        <div></div>}
                 <ProjectTitle>
-                    Ping
+                    {props.Title}
                 </ProjectTitle>
                 <ProjectMiniDesc>
-                    An event creating app designed by students for students 
+                    {props.MiniDescription}
                 </ProjectMiniDesc>
             <ProjectInfoBox>
                 <ProjectInfoBody>
-                    Ping changes how college students can interact with each other and meet new people. Utilizing Google Maps 
-                    API, users can create location-tagged events in seconds that anyone with the app can then access through
-                    our map.
+                    {props.BodyText}
                 </ProjectInfoBody>
             </ProjectInfoBox>
             <GithubLinkHolder>
-                <GithubLink href="https://github.com/ksyadav01/Ping">G I T H U B</GithubLink>
+                <GithubLink href={props.GithubLink}>G I T H U B</GithubLink>
             </GithubLinkHolder>
 
             <ProjectTechnologyBox>
@@ -273,4 +291,4 @@ const WorkExperience = (props) =>{
         </ProjectHolder>
     )
 }
-export default WorkExperience;
+export default ProjectRight;

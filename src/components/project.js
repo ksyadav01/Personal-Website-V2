@@ -8,7 +8,8 @@ import styled from 'styled-components';
 import LeftCarrotImage from "../images/LeftCarrot.png";
 import RightCarrotImage from "../images/RightCarrot.png";
 import IvyScope from "../images/IvyScope.png";
-import IndividualProjects from "./projects.js"
+import ProjRight from "./projectsRight.js"
+import ProjLeft from "./projectsLeft"
 import PingProject from '../images/PingProject.png';
 
 const ProjectsContainer  = styled.div`
@@ -33,6 +34,7 @@ const ProjectsDescription = styled.div`
     color: #FF4C29;
     font-family: Space Mono;
     font-size: 1.5rem;
+    margin-bottom: 5%;
 `
 const IndividualProjectsHolder = styled.div`
     display: flex;
@@ -55,10 +57,23 @@ const Projects = (props) =>{
                 Some Of My Creations
             </ProjectsDescription>
             <IndividualProjectsHolder>
-                <IndividualProjects PingProject={PingProject} temp={'asdads'} Technologies={PingTechnologies}
-                    Languages={PingLanguages} GitHub={"https://github.com/ksyadav01/Ping"}>
+                <ProjRight PingProject={PingProject} Title="Ping"
+                    MiniDescription="An event creating app designed by students for students"
+                    BodyText="Ping changes how college students can interact with each other and meet new people. Utilizing Google Maps 
+                        API, users can create location-tagged events in seconds that anyone with the app can then access through
+                        our map."
+                    Technologies={PingTechnologies} Featured={true} Languages={PingLanguages} 
+                    GitHub={"https://github.com/ksyadav01/Ping"}>
 
-                </IndividualProjects>
+                </ProjRight>
+                <ProjLeft PingProject={PingProject} Title="KARAN.GG"
+                    MiniDescription="An OP.GG alternative with better results"
+                    BodyText="KARAN.GG is a stat tracker and analyzer for the popular MOBA League of Legends. Although many
+                        competitors already exist, KARAN.GG provides unique data back to the user that others don't
+                        offer, including duo winrates and individual champion winrates."
+                    Technologies={PingTechnologies} Featured={false} Languages={PingLanguages} GitHub={"https://github.com/ksyadav01/Ping"}>
+
+                </ProjLeft>
                 
             </IndividualProjectsHolder>
         </ProjectsContainer>
