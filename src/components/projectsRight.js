@@ -66,7 +66,7 @@ const ProjectTitle = styled.div`
     width: 100%;
     height: 100%;
 
-    color: #fc0328;
+    color: #e91631;
     font-family: Space Mono;
     font-size: 3rem;
     text-align: right;
@@ -108,7 +108,7 @@ const ProjectInfoBody = styled.div`
     text-align: right;
     color: white;
     font-family: Space Mono;
-    font-size: 0.9rem;
+    font-size: ${props => props.FontSize};
     transition: 0.25s ease;
     
     display: flex;
@@ -254,7 +254,7 @@ const ProjectRight = (props) =>{
                     {props.MiniDescription}
                 </ProjectMiniDesc>
             <ProjectInfoBox>
-                <ProjectInfoBody>
+                <ProjectInfoBody FontSize={props.FontSize}>
                     {props.BodyText}
                 </ProjectInfoBody>
             </ProjectInfoBox>

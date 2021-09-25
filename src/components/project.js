@@ -49,8 +49,8 @@ const Projects = (props) =>{
     const PingLanguages = ['javascript','|','html','|','css']
     const KARANGGTechnologies = ['riot api','|','flask','|','plotly','|','github']
     const KARANGGLanguages = ['python']
-    const WorldMapperTechnologies = ['react','|','flask','|','plotly','|','github']
-    const WorldMapperLanguages = ['python']
+    const WorldMapperTechnologies = ['react','|','mongo db','|','graphql','|','mern stack','|','github']
+    const WorldMapperLanguages = ['JavaScript','|','html','|','css']
     
     return(
         <ProjectsContainer>
@@ -66,10 +66,12 @@ const Projects = (props) =>{
                     BodyText="Ping changes how college students can interact with each other and meet new people. Utilizing Google Maps 
                         API, users can create location-tagged events in seconds that anyone with the app can then access through
                         our map."
+                    FontSize="0.9rem"
                     Technologies={PingTechnologies} Featured={true} Languages={PingLanguages} 
-                    GitHub={"https://github.com/ksyadav01/Ping"}>
 
+                    GitHub={"https://github.com/ksyadav01/Ping"}>
                 </ProjRight>
+
                 <ProjLeft PingProject={PingProject} Title="KARAN.GG"
                     MiniDescription="An OP.GG alternative with better results"
                     BodyText="KARAN.GG is a stat tracker and analyzer for the popular MOBA League of Legends. Although many
@@ -77,10 +79,18 @@ const Projects = (props) =>{
                         offer, including duo winrates and individual champion winrates."
                     FontSize={(225/249) * 0.9+"rem"}
                     Technologies={KARANGGTechnologies} Featured={false} Languages={KARANGGLanguages} 
-                    GitHub={"https://github.com/ksyadav01/Ping"}>
-
+                    GitHub={"https://github.com/ksyadav01/KARAN.GG"}>
                 </ProjLeft>
-                
+
+                <ProjRight PingProject={PingProject} Title="World Data Mapper"
+                    MiniDescription="Tracking world data hasn't been easier"
+                    BodyText="A map creating website where users create their own custom maps and provide attributes. 
+                        Ranging from creating a map of the real world or creating a fantasy world  with your own custom information,
+                         there are numerous possibilities with what one can do."
+                    FontSize={(225/249) * 0.9+"rem"}
+                    Technologies={PingTechnologies} Featured={true} Languages={PingLanguages} 
+                    GitHub={"https://github.com/ksyadav01/Ping"}>
+                </ProjRight>
             </IndividualProjectsHolder>
         </ProjectsContainer>
     )
