@@ -47,6 +47,10 @@ const IndividualProjectsHolder = styled.div`
 const Projects = (props) =>{
     const PingTechnologies = ['react-native','|','firebase','|','expo','|','github']
     const PingLanguages = ['javascript','|','html','|','css']
+    const KARANGGTechnologies = ['riot api','|','flask','|','plotly','|','github']
+    const KARANGGLanguages = ['python']
+    const WorldMapperTechnologies = ['react','|','flask','|','plotly','|','github']
+    const WorldMapperLanguages = ['python']
     
     return(
         <ProjectsContainer>
@@ -71,7 +75,9 @@ const Projects = (props) =>{
                     BodyText="KARAN.GG is a stat tracker and analyzer for the popular MOBA League of Legends. Although many
                         competitors already exist, KARAN.GG provides unique data back to the user that others don't
                         offer, including duo winrates and individual champion winrates."
-                    Technologies={PingTechnologies} Featured={false} Languages={PingLanguages} GitHub={"https://github.com/ksyadav01/Ping"}>
+                    FontSize={(225/249) * 0.9+"rem"}
+                    Technologies={KARANGGTechnologies} Featured={false} Languages={KARANGGLanguages} 
+                    GitHub={"https://github.com/ksyadav01/Ping"}>
 
                 </ProjLeft>
                 

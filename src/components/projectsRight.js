@@ -51,6 +51,7 @@ const ProjectFeatured = styled.div`
     font-family: Space Mono;
     font-size: 1rem;
     text-align: right;
+
 `
 const ProjectTitle = styled.div`
     grid-column-start: c;

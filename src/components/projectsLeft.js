@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-
-
 const ProjectHolder = styled.div`
     width: 100%;
     background-color: #082032;
@@ -118,7 +116,7 @@ const ProjectInfoBody = styled.div`
     text-align: left;
     color: white;
     font-family: Space Mono;
-    font-size: 0.9rem;
+    font-size: ${props => props.FontSize};
     transition: 0.25s ease;
     
     display: flex;
@@ -243,6 +241,11 @@ const ProjectTechnology = styled.div`
 
 const ProjectLeft = (props) =>{
     
+
+    // const [FontSize,setFontSize] = useState();
+    // useEffect(()=>{
+    //     setFontSize(219/props.BodyText.length);
+    // },[]);
     return(
         <ProjectHolder>
             <ProjectImageHolder>
@@ -264,7 +267,7 @@ const ProjectLeft = (props) =>{
                     {props.MiniDescription}
                 </ProjectMiniDesc>
             <ProjectInfoBox>
-                <ProjectInfoBody>
+                <ProjectInfoBody FontSize={props.FontSize}>
                     {props.BodyText}
                 </ProjectInfoBody>
             </ProjectInfoBox>
