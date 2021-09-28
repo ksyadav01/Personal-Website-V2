@@ -7,8 +7,5 @@ body {
     min-width: 1000px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
-    
+    background-color: #082032;
 }
-#navbar {
-    transition: top 0.5s
-  }

@@ -52,14 +52,17 @@ const TextHolder = styled.div`
 
 const headerContainer = {
     minWidth: "100%",
-    height: "3%",
+    height: "10%",
     backgroundColor: "#071c2b",
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-start",
+    justifyContent: "flex-start",
     padding: "1rem 3rem",
     boxSizing: "border-box",
-    transition: "all .3s ease",
+    transition: "all .5s ease",
+    position: "sticky",
+    zIndex: 50,
 }
 const logoContainer = {
     display: "flex",
@@ -75,30 +78,28 @@ const navContainer = {
     padding: "1rem 3rem"
 }
 const header = () =>{
-
-    if (typeof window !== 'undefined') {
-        let prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-        const maxScroll = document.body.clientHeight - window.innerHeight;
-        let currentScrollPos = window.pageYOffset;
-        if (
-            (maxScroll > 0 && prevScrollpos > currentScrollPos && prevScrollpos <= maxScroll) 
-            || (maxScroll <= 0 && prevScrollpos > currentScrollPos)
-            || (prevScrollpos <= 0 && currentScrollPos <= 0)
-            ) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-5rem"; // adjustable based your need
-        }
-        prevScrollpos = currentScrollPos;
-        }
+    let counter= 0;
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    //console.log(prevScrollpos+"," +currentScrollPos)
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+    } else {
+            document.getElementById("navbar").style.top = "-100%";
+        counter+=1;
+    }
+    if(currentScrollPos == 0){// If user at top of page
+        document.getElementById("navbar").style.opacity = "1";
+    }
+    else{
+        document.getElementById("navbar").style.opacity = "0.8";
+    }
+    prevScrollpos = currentScrollPos;
     }
     
     return(
-        <div style={headerContainer} id="navbar"
-        data-sal="fade"
-        data-sal-delay="30"
-        data-sal-easing="ease">
+        <div style={headerContainer} id="navbar">
             <div style={logoContainer}>
                 <LogoFont text="KYADAV" style={logo}/>
             </div>

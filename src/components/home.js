@@ -44,7 +44,8 @@ const HomeContainer = styled.div`
     padding-top: 3%;
     box-sizing: border-box;
     z-index: 5;
-    height: 100%
+    height: 100%;
+    margin-top: 5%;
 `
 const LeftOuterContainer = styled.div`
     display: flex;
