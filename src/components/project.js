@@ -53,7 +53,7 @@ const Projects = (props) =>{
     const WorldMapperLanguages = ['JavaScript','|','html','|','css']
     
     return(
-        <ProjectsContainer>
+        <ProjectsContainer id="projects" >
             <ProjectsTitle>
                 P R O J E C T S
             </ProjectsTitle>
@@ -88,7 +88,7 @@ const Projects = (props) =>{
                         Ranging from creating a map of the real world or creating a fantasy world  with your own custom information,
                          there are numerous possibilities with what one can do."
                     FontSize={(225/249) * 0.9+"rem"}
-                    Technologies={PingTechnologies} Featured={true} Languages={PingLanguages} 
+                    Technologies={PingTechnologies} Featured={false} Languages={PingLanguages} 
                     GitHub={"https://github.com/ksyadav01/Ping"}>
                 </ProjRight>
             </IndividualProjectsHolder>

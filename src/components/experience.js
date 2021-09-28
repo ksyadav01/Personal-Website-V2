@@ -64,7 +64,7 @@ const Experience = () =>{
         SongFetch() 
     },[]);
     return(
-        <ExperienceContainer>
+        <ExperienceContainer id="experience">
             <ExperienceTitle>
                 E X P E R I E N C E
             </ExperienceTitle>

@@ -5,5 +5,10 @@ body {
     margin: 0;
     padding: 0;
     min-width: 1000px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
     
 }
+#navbar {
+    transition: top 0.5s
+  }
