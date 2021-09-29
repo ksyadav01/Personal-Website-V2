@@ -80,6 +80,8 @@ const navContainer = {
 }
 const header = () =>{
     let counter= 0;
+    const isBrowser = () => typeof window !== "undefined"
+    isBrowser() && window.location.replace(res.data)
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
@@ -97,9 +99,6 @@ const header = () =>{
         document.getElementById("navbar").style.opacity = "0.8";
     }
     prevScrollpos = currentScrollPos;
-    }
-    function onResumeClick() {
-      window.open(Pdf);
     }
     
     return(
