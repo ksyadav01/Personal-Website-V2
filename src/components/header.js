@@ -113,7 +113,7 @@ const header = () =>{
                 <CodeFont text="&nbsp;|&nbsp;" style={text}/>
 
                 <TextHolder>
-                    <Link to="/education/" style={links}>
+                    <Link to="/#education" style={links}>
                         <TextHolder>Education</TextHolder>
                     </Link>
                 </TextHolder>
@@ -129,7 +129,7 @@ const header = () =>{
                 <CodeFont text="&nbsp;|&nbsp;" style={text}/>
 
                 <TextHolder>
-                    <Link to="/contact/" style={links}>
+                    <Link to="/#contact" style={links}>
                         <TextHolder>Contact</TextHolder>
                     </Link>
                 </TextHolder>

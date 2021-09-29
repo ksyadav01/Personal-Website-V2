@@ -13,7 +13,7 @@ const ExperienceContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding-top: 8%;
+    padding-top: 15%;
     padding-bottom: 8%;
     box-sizing: border-box;
     z-index: 5;

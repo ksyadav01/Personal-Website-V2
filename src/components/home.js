@@ -45,7 +45,7 @@ const HomeContainer = styled.div`
     box-sizing: border-box;
     z-index: 5;
     height: 100%;
-    margin-top: 5%;
+    padding-top: 5%;
 `
 const LeftOuterContainer = styled.div`
     display: flex;
@@ -194,7 +194,7 @@ const Home = () =>{
                             I'm a Software Developer based out of upstate New York and currently attend Stony Brook University. Currently 
                             pursuing a major in Computer Science, I love learning new technologies and programming languages, along with
                             applying those newly learned skills to my projects. I am actively seeking a full time internship for the Summer 
-                            of 2022. If you think I'm a good fit, feel free to <a style={{color: "#71e9fd"}}>contact</a> me! {/** add link to contact page here */}
+                            of 2022. If you think I'm a good fit, feel free to <a style={{color: "#71e9fd"}} href="/#contact">contact</a> me! {/** add link to contact page here */}
                         </Description>
                     </DescriptionContainer>
                     <StatusContainer>

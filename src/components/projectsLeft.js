@@ -74,7 +74,7 @@ const ProjectTitle = styled.div`
     width: 100%;
     height: 100%;
 
-    color: #fc0328;
+    color: #FF4C29;
     font-family: Space Mono;
     font-size: 3rem;
     text-align: right;
@@ -272,7 +272,7 @@ const ProjectLeft = (props) =>{
                 </ProjectInfoBody>
             </ProjectInfoBox>
             <GithubLinkHolder>
-                <GithubLink href={props.GithubLink}>G I T H U B</GithubLink>
+                <GithubLink href={props.GitHub}>G I T H U B</GithubLink>
             </GithubLinkHolder>
 
             <ProjectTechnologyBox>
