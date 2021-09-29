@@ -170,7 +170,7 @@ const Home = () =>{
     const [CurrentSong, setCurrentSong] = useState();
     useEffect(()=>{
         async function SongFetch(){
-            let response = await fetch(process.env.LASTFM_KEY)
+            let response = await fetch("http://ws.audioscrobbler.com//2.0/?method=user.getrecenttracks&user=kingeinhorn&api_key=ae3471fe6f952ffb40c99ad83bba5596&format=json")
             response = await response.json();
             setCurrentSong(response.recenttracks.track[0].name + " by " +response.recenttracks.track[0].artist["#text"]);
             
