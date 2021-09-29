@@ -1,23 +1,17 @@
-import React, { useState } from 'react';
-import { Document, Page } from 'react-pdf';
+import React, { Component } from 'react';
+import Pdf from '../pdf/karan_yadav_resume.pdf';
 
-function MyApp() {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+class Download extends Component {
 
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
+  render() {
+
+    return (
+        <div className = "App">
+          <a href = {Pdf} target = "_blank">Download Pdf</a>
+        </div>
+    );
+
   }
-
-  return (
-    <div>
-      <Document
-        file="../pdf./karan_yadav_resume.pdf"
-        onLoadSuccess={onDocumentLoadSuccess}
-      >
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <p>Page {pageNumber} of {numPages}</p>
-    </div>
-  );
 }
+
+export default Download;

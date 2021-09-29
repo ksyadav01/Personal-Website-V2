@@ -5,6 +5,7 @@ import LogoFont from "./fonts/LogoFont"
 import CodeFont from "./fonts/CodeFont"
 import styled, { withTheme } from 'styled-components';
 import { Container, Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstrap';
+import Pdf from './pdfs/karan_yadav_resume.pdf';
 
 
 const logo = {
@@ -97,6 +98,9 @@ const header = () =>{
     }
     prevScrollpos = currentScrollPos;
     }
+    function onResumeClick() {
+      window.open(Pdf);
+    }
     
     return(
         <div style={headerContainer} id="navbar">
@@ -134,7 +138,11 @@ const header = () =>{
                     </Link>
                 </TextHolder>
                 <CodeFont text="&nbsp;|&nbsp;" style={text}/>
-                <TextHolder>Resume</TextHolder>
+                <TextHolder>
+                    <a href = {Pdf} style={links}>
+                        <TextHolder>Resume</TextHolder>
+                    </a>
+                </TextHolder>
 
             </div>
         </div>
