@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "canvas": "^2.8.0",
     "gatsby": "^3.12.1",
     "gatsby-plugin-google-analytics": "^3.13.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -33,7 +34,5 @@
     "styled-components": "^5.3.1",
     "util": "^0.12.4"
   },
-  "devDependencies": {
-    "webpack": "^5.55.0"
-  }
+  "devDependencies": {}
 }

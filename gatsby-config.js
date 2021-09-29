@@ -3,7 +3,7 @@ require("dotenv").config({
  })
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.karanyadav.com",
     title: "Personal Website V2",
   },
   plugins: [

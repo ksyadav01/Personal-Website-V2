@@ -80,25 +80,27 @@ const navContainer = {
 }
 const header = () =>{
     let counter= 0;
-    const isBrowser = () => typeof window !== "undefined"
-    isBrowser() && window.location.replace(res.data)
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    //console.log(prevScrollpos+"," +currentScrollPos)
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-    } else {
-            document.getElementById("navbar").style.top = "-100%";
-        counter+=1;
-    }
-    if(currentScrollPos == 0){// If user at top of page
-        document.getElementById("navbar").style.opacity = "1";
-    }
-    else{
-        document.getElementById("navbar").style.opacity = "0.8";
-    }
-    prevScrollpos = currentScrollPos;
+    // const isBrowser = () => typeof window !== "undefined"
+    // isBrowser() && window.location.replace(res.data)
+    if (typeof window !== `undefined`) {
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        //console.log(prevScrollpos+"," +currentScrollPos)
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+                document.getElementById("navbar").style.top = "-100%";
+            counter+=1;
+        }
+        if(currentScrollPos == 0){// If user at top of page
+            document.getElementById("navbar").style.opacity = "1";
+        }
+        else{
+            document.getElementById("navbar").style.opacity = "0.8";
+        }
+        prevScrollpos = currentScrollPos;
+        }
     }
     
     return(

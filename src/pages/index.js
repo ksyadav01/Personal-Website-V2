@@ -23,9 +23,6 @@ const MainBody = styled.div`
 //Normally I would have something quirky here but I'm too lazy
 
 const IndexPage = () => {
-  <Route exact path="/#resume">
-    <Redirect to="/static/karan_yadav_resume-7ade55bb4b9adbf43ce09b65c44e0c68.pdf" />
-  </Route>
   return (
     <MainBody>
       <Header />
