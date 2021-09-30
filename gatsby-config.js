@@ -2,6 +2,7 @@ require("dotenv").config({
   path: `.env`,
  })
 module.exports = {
+  pathPrefix: "/Personal-Website-V2",
   siteMetadata: {
     siteUrl: "https://www.karanyadav.com",
     title: "Personal Website V2",

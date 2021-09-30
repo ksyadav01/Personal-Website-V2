@@ -3,3 +3,6 @@ node_modules/
 public
 .history/
 .env.development
+
+# Local Netlify folder
+.netlify
