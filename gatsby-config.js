@@ -15,6 +15,13 @@ module.exports = {
         trackingId: "UA-189239857-1",
         head: false,
       },
+    },{
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/ // Where the animated svgs are.
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-google-fonts`,

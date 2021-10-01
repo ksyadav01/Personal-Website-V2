@@ -65,14 +65,73 @@ const LeftContainer = styled.div`
     `
 const RightContainer = styled.div`
     display: flex;
-    top: 0;
-    bottom: 0;
-    position: relative;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     width: 30%;
     align-items: center;
+    //border: 1px solid white;
+    height: 100%;
     `
+const CurrentTechnologies = styled.div`
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //border: 1px solid red;
+`
+const LanguagesHeader = styled.div`
+    font-size: 1.25rem;
+    font-family: Space Mono;
+    color: white;
+    width: 100%;
+    //border: 1px solid orange;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+
+    //border-left: 2px solid white;
+    border-bottom: 1px solid white;
+    //border-radius: 20px;
+`
+const TechnologiesHeader = styled.div`
+    font-size: 1.25rem;
+    font-family: Space Mono;
+    color: white;
+    width: 100%;
+    //border: 1px solid orange;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+
+    //border-left: 2px solid white;
+    //border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    //border-radius: 20px;
+`
+const CurrentTechHeader = styled.div`
+    font-size: 1.25rem;
+    font-family: Space Mono;
+    color: white;
+    text-align: center;
+    //text-decoration: underline;
+    width: 100%;
+`
+const CurrentTechnologiesText = styled.div`
+    font-size: 0.9rem;
+    font-family: Space Mono;
+    color: white;
+    width: 90%;
+    text-align: center;
+    //border: 1px solid green;
+`
 const NameContainer = styled.div`
     width: 75%;
     border-bottom: 3px solid #FF4C29;
@@ -89,7 +148,7 @@ const StatusContainer = styled.div`
     align-items: center;
     margin-top: 5rem;
     padding: 10px;
-    border: 3px solid #334756;
+    //border: 3px solid #334756;
     border-radius: 20px;    
     `
 const ImageContainer = styled.div`
@@ -113,13 +172,12 @@ const Description = styled.div`
     `
      
 const StatusLeftCarrot = styled.div`
-    font-size: 10rem;
-    
-    font-weight: 400;
+    font-size: 10rem;  
     color: #FF4C29;
     transform:scale(1,2); 
     margin-right: 2%;
-    font-family: Space Mono;
+    font-family: sans serrif;
+    //font-family: Space Mono;
     `   
 const StatusRightSlash = styled.div`
     font-size: 10rem;
@@ -131,7 +189,8 @@ const StatusRightCarrot = styled.div`
     font-size: 10rem;
     color: #FF4C29;
     transform:scale(1,2);
-    font-family: Space Mono;
+    font-family: sans serrif;
+    //font-family: Space Mono;
     `
 const StatusHolder = styled.div`
     display: flex;
@@ -260,8 +319,25 @@ const Home = () =>{
                 </LeftContainer>
             </LeftOuterContainer>
             <RightContainer>
-                    <img style={{width: "80%", marginTop: "10vh", border: "1px solid black", borderRadius: "20px"}} alt="Profile Picture" src={ProfilePicture}></img>
-               
+                    <img style={{width: "80%", border: "1px solid black", borderRadius: "20px"}} alt="Profile Picture" src={ProfilePicture}></img>
+                <CurrentTechnologies>
+                    <LanguagesHeader>
+                        <CurrentTechHeader>
+                             Languages
+                        </CurrentTechHeader>
+                        <CurrentTechnologiesText>
+                            Java | Python | JavaScript | C++ | HTML | CSS | Assembly | Bash
+                        </CurrentTechnologiesText>
+                    </LanguagesHeader>
+                    <TechnologiesHeader>
+                        <CurrentTechHeader>
+                             Technologies
+                        </CurrentTechHeader>
+                        <CurrentTechnologiesText>
+                            Git/GitHub | React | React Native | Expo | Flask | Heroku | Mongo DB | Firebase 
+                        </CurrentTechnologiesText>
+                    </TechnologiesHeader>
+                </CurrentTechnologies>
             </RightContainer>
         </HomeContainer>
     )
