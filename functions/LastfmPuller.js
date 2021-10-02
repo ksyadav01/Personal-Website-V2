@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+//const fetch = require("node-fetch");
 // exports.handler = async function () {
 //     let response = await fetch("http://ws.audioscrobbler.com//2.0/?method=user.getrecenttracks&user=kingeinhorn&api_key=ae3471fe6f952ffb40c99ad83bba5596&format=json")
 //         response = await response.json();
@@ -12,12 +12,9 @@ exports.handler = async () => {
     const url = "http://ws.audioscrobbler.com//2.0/?method=user.getrecenttracks&user=kingeinhorn&api_key=ae3471fe6f952ffb40c99ad83bba5596&format=json";
     try {
         console.log('pp')
-      const songStream = await fetch(url, {
-        headers: {
-          Accept: "application/json"
-        }
-      });
+      const songStream = await fetch(url);
       console.log(songStream)
+      console.log("tester")
       const jsonSong = await songStream.json();
       return {
         statusCode: 200,
