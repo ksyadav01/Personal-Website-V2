@@ -230,12 +230,29 @@ const Home = () =>{
     
     const [CurrentSong, setCurrentSong] = useState();
     useEffect(()=>{
-        async function SongFetch(){
-            let response = await fetch("http://ws.audioscrobbler.com//2.0/?method=user.getrecenttracks&user=kingeinhorn&api_key=ae3471fe6f952ffb40c99ad83bba5596&format=json")
-            response = await response.json();
-            setCurrentSong(response.recenttracks.track[0].name + " by " +response.recenttracks.track[0].artist["#text"]);
+        console.log("das")
+        async function  SongFetch(){
+            /* const url = "https://icanhazdadjoke.com/";
+            const jokeStream = await fetch(url, {
+              headers: {
+                Accept: "application/json"
+              }
+            }); */
+            console.log("1")
+            const url = "/.netlify/functions/LastfmPuller";
+            console.log("2")
+            const songStream = await fetch(url);
+            console.log("3")
+            console.log(songStream)
+            const jsonSong = await songStream.json();
+            console.log("4")
+            console.log(jsonSong);
+            console.log('psdap')
+            //const song = jsonSong.joke;
+            //return joke;
             
         }
+        console.log("ppsa")
         SongFetch() 
     },[]);
     return(
