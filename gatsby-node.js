@@ -1,2 +1,20 @@
-const requireEsm = require('esm')(module);
-module.exports = requireEsm('./gatsby-node.esm.js');
+exports.onCreateWebpackConfig = ({
+    stage,
+    rules,
+    loaders,
+    plugins,
+    actions,
+  }) => {
+    if (stage === "build-html") {
+      actions.setWebpackConfig({
+        module: {
+          rules: [
+            {
+              test: /canvas/,
+              use: loaders.null(),
+            },
+          ],
+        },
+      })
+    }
+  };
