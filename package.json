@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "canvas": "^2.8.0",
+    "esm": "^3.2.25",
     "gatsby": "^3.12.1",
     "gatsby-plugin-google-analytics": "^3.13.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
