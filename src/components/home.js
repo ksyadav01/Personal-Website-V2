@@ -247,7 +247,7 @@ const Home = () =>{
             const jsonSong = await songStream.json();
             console.log("4")
             console.log(jsonSong);
-            console.log('psdap')
+            console.log(jsonSong.recenttracks.track[0].name)
             //const song = jsonSong.joke;
             //return joke;
             
