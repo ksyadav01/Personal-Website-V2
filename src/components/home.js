@@ -230,7 +230,7 @@ const Home = () =>{
     
     const [CurrentSong, setCurrentSong] = useState();
     useEffect(()=>{
-        console.log("das")
+        //console.log("das")
         async function  SongFetch(){
             /* const url = "https://icanhazdadjoke.com/";
             const jokeStream = await fetch(url, {
@@ -238,21 +238,21 @@ const Home = () =>{
                 Accept: "application/json"
               }
             }); */
-            console.log("1")
+            //console.log("1")
             const url = "/.netlify/functions/LastfmPuller";
-            console.log("2")
+            //console.log("2")
             const songStream = await fetch(url);
-            console.log("3")
-            console.log(songStream)
+            //console.log("3")
+            //console.log(songStream)
             const jsonSong = await songStream.json();
-            console.log("4")
-            console.log(jsonSong);
-            console.log(jsonSong.recenttracks.track[0].name)
+            //console.log("4")
+            //console.log(jsonSong);
+            setCurrentSong(jsonSong.recenttracks.track[0].name + " by " +jsonSong.recenttracks.track[0].artist["#text"]);
             //const song = jsonSong.joke;
             //return joke;
             
         }
-        console.log("ppsa")
+        //console.log("ppsa")
         SongFetch() 
     },[]);
     return(

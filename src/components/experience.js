@@ -55,13 +55,13 @@ const Experience = () =>{
     
     const [CurrentSong, setCurrentSong] = useState();
     useEffect(()=>{
-        async function SongFetch(){
-            let response = await fetch(process.env.LASTFM_KEY)
-            response = await response.json();
-            setCurrentSong(response.recenttracks.track[0].name + " by " +response.recenttracks.track[0].artist["#text"]);
+        // async function SongFetch(){
+        //     let response = await fetch(process.env.LASTFM_KEY)
+        //     response = await response.json();
+        //     setCurrentSong(response.recenttracks.track[0].name + " by " +response.recenttracks.track[0].artist["#text"]);
             
-        }
-        SongFetch() 
+        // }
+        // SongFetch() 
     },[]);
     return(
         <ExperienceContainer id="experience">
