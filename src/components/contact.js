@@ -126,7 +126,7 @@ const Contact = () =>{
                             Reach me at
                         </ContactMainText>
                         <ContactSubText>
-                            (518)-334-5038)
+                            (518)-334-5038
                         </ContactSubText>
                     </ContactLinkedIn>
                     <ContactLinkedIn>

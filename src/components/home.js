@@ -256,7 +256,7 @@ const Home = () =>{
         SongFetch() 
     },[]);
     return(
-        <HomeContainer>
+        <HomeContainer id="home">
             <LeftOuterContainer>
                 <LeftContainer>
                     <NameContainer>

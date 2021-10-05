@@ -10,6 +10,7 @@ import Terminal from './assets/TerminalPrompt.svg'
 import { CSSTransition } from 'react-transition-group';
 import 'mdbreact/dist/css/mdb.css';
 import Header from "./header"
+import ToTop from "./toTop"
 import Home from "./home"
 import Experience from "./experience"
 import Education from "./education"
@@ -44,12 +45,14 @@ const Terminals = () =>{
                 <Terminal style={{border: "1px", borderRadius: "10px", animation: "fadeInOut 5s"}}></Terminal>
             </TerminalContainer>
             : <div style={{animation: "fadeIn 1s"}}>
+                
                 <Header />
                 <Home />
                 <Experience />
                 <Education />
                 <Projects />
                 <Contact />
+                <ToTop/>
             </div> }
         </div>
       );

@@ -78,26 +78,52 @@ const navContainer = {
     flex: 1,
     padding: "1rem 3rem"
 }
+const BackToTopHolder = styled.div`
+    position: sticky;
+    bottom: 0;
+    color: white;
+`
 const header = () =>{
     let counter= 0;
     // const isBrowser = () => typeof window !== "undefined"
     // isBrowser() && window.location.replace(res.data)
+    function getDocHeight() {
+        var D = document;
+        return Math.max(
+            D.body.scrollHeight, D.documentElement.scrollHeight,
+            D.body.offsetHeight, D.documentElement.offsetHeight,
+            D.body.clientHeight, D.documentElement.clientHeight
+        )
+    }
     if (typeof window !== `undefined`) {
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
+        var winheight= window.innerHeight || (document.documentElement || document.body).clientHeight
+        var docheight = getDocHeight()
+        var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+        var trackLength = docheight - winheight
+        var pctScrolled = Math.floor(scrollTop/trackLength * 100)
         //console.log(prevScrollpos+"," +currentScrollPos)
         if (prevScrollpos > currentScrollPos) {
             document.getElementById("navbar").style.top = "0";
+            // document.getElementById("bottombar").style.bottom = "0";
         } else {
                 document.getElementById("navbar").style.top = "-100%";
             counter+=1;
         }
         if(currentScrollPos == 0){// If user at top of page
             document.getElementById("navbar").style.opacity = "1";
+            document.getElementById("bottombar").style.bottom = "-100%";
         }
         else{
             document.getElementById("navbar").style.opacity = "0.8";
+        }
+        if(pctScrolled < 10){
+            document.getElementById("bottombar").style.bottom = "-100%";
+        }
+        else{
+            document.getElementById("bottombar").style.bottom = "0";
         }
         prevScrollpos = currentScrollPos;
         }
