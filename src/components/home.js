@@ -6,7 +6,8 @@ import CodeFont from "./fonts/CodeFont"
 import styled from 'styled-components';
 import LeftCarrotImage from "../images/LeftCarrot.png";
 import RightCarrotImage from "../images/RightCarrot.png";
-import ProfilePicture from "../images/ProfilePicture.jpg";
+import ProfilePicture from "../images/ProfilePicture1.jpg";
+import ProfilePictureCropped from "../images/ProfilePictureCropped2.jpg";
 
 const logo = {
     fontSize: "1.5rem",
@@ -336,7 +337,7 @@ const Home = () =>{
                 </LeftContainer>
             </LeftOuterContainer>
             <RightContainer>
-                    <img style={{width: "80%", border: "1px solid black", borderRadius: "20px"}} alt="Profile Picture" src={ProfilePicture}></img>
+                    <img style={{width: "80%", border: "1px solid black", borderRadius: "20px"}} alt="Profile Picture" src={ProfilePictureCropped}></img>
                 <CurrentTechnologies>
                     <LanguagesHeader>
                         <CurrentTechHeader>
