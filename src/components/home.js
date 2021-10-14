@@ -305,7 +305,9 @@ const Home = () =>{
                                 </StatusLeft>
                                 <StatusRight style={{color: "#71e9fd"}}>
                                      <a style={{color: "#71e9fd", textDecoration: "none"}} 
-                                        href="https://www.amazon.com/Mr-Robot-Season-1/dp/B00YBX664Q">Mr. Robot</a>
+                                        // href="https://www.amazon.com/Mr-Robot-Season-1/dp/B00YBX664Q">Mr. Robot
+                                        href="https://www.netflix.com/title/81040344">Squid Game
+                                        </a>
                                 </StatusRight>
                             </StatusLeftRightHolder>
 
